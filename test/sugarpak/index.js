@@ -9,8 +9,99 @@ Date.Specification = new Specification({
       }
     }
    },
-    
-    
+
+  '.before()': {
+    setup: function() {},
+    'seconds': {
+      run: function() { },
+      assert: function() {
+        return Date.equals((10).seconds().before(new Date(2010, 0, 1, 0, 0, 10)), new Date(2010, 0, 1));
+      }
+    },
+    'minutes': {
+      run: function() { },
+      assert: function() {
+        return Date.equals((2).minutes().before(new Date(2010, 0, 1, 0, 2)), new Date(2010, 0, 1));
+      }
+    },
+    'hours': {
+      run: function() { },
+      assert: function() {
+        return Date.equals((8).hours().before(new Date(2010, 0, 1, 8)), new Date(2010, 0, 1));
+      }
+    },
+    'days': {
+      run: function() { },
+      assert: function() {
+        return Date.equals((4).days().before(new Date(2010, 0, 5)), new Date(2010, 0, 1));
+      }
+    },
+    'weeks': {
+      run: function() { },
+      assert: function() {
+        return Date.equals((6).weeks().before(new Date(2010, 1, 12)), new Date(2010, 0, 1));
+      }
+    },
+    'months': {
+      run: function() { },
+      assert: function() {
+        return Date.equals((12).months().before(new Date(2011, 0, 1)), new Date(2010, 0, 1));
+      }
+    },
+    'years': {
+      run: function() { },
+      assert: function() {
+        return Date.equals((4).years().before(new Date(2014, 0, 1)), new Date(2010, 0, 1));
+      }
+    }
+  },
+
+  '.after()': {
+    setup: function() {},
+    'seconds': {
+      run: function() { },
+      assert: function() {
+        return Date.equals((10).seconds().after(new Date(2010, 0, 1)), new Date(2010, 0, 1, 0, 0, 10));
+      }
+    },
+    'minutes': {
+      run: function() { },
+      assert: function() {
+        return Date.equals((2).minutes().after(new Date(2010, 0, 1)), new Date(2010, 0, 1, 0, 2));
+      }
+    },
+    'hours': {
+      run: function() { },
+      assert: function() {
+        return Date.equals((8).hours().after(new Date(2010, 0, 1)), new Date(2010, 0, 1, 8));
+      }
+    },
+    'days': {
+      run: function() { },
+      assert: function() {
+        return Date.equals((4).days().after(new Date(2010, 0, 1)), new Date(2010, 0, 5));
+      }
+    },
+    'weeks': {
+      run: function() { },
+      assert: function() {
+        return Date.equals((6).weeks().after(new Date(2010, 0, 1)), new Date(2010, 1, 12));
+      }
+    },
+    'months': {
+      run: function() { },
+      assert: function() {
+        return Date.equals((12).months().after(new Date(2010, 0, 1)), new Date(2011, 0, 1));
+      }
+    },
+    'years': {
+      run: function() { },
+      assert: function() {
+        return Date.equals((4).years().after(new Date(2010, 0, 1)), new Date(2014, 0, 1));
+      }
+    }
+  },
+
   '.same()': {
     setup: function() {},
     'same year(Date.today())': {

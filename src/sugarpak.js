@@ -32,7 +32,7 @@
     $P._isSecond = false;
 
     // private
-    $N._dateElement = "day";
+    $N._dateElement = "days";
 
     /** 
      * Moves the date to the next instance of a date as specified by the subsequent date element function (eg. .day(), .month()), month name function (eg. .january(), .jan()) or day name function (eg. .friday(), fri()).
@@ -445,7 +445,7 @@
         $P[de] = $P[de + "s"] = ef(px[k]);
         
         // Create date element functions and plural date element functions used with Number (eg. day(), days(), months()).
-        $N[de] = $N[de + "s"] = nf(de);
+        $N[de] = $N[de + "s"] = nf(de + "s");
     }
     
     $P._ss = ef("Second");
